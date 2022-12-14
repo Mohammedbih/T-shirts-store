@@ -23,7 +23,7 @@ const Footer = () => {
             className={classes.rootBox}
           >
             <Link href="#" color="inherit" underline="none">
-              {brand}
+              {/* {brand} */}
             </Link>
           </Box>
         </Container>
