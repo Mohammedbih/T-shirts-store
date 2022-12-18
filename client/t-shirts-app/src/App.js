@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+ import {Container} from '@mui/material'
+ import { ThemeProvider } from '@mui/system';
+import Appbar from './components/Appbar/AppbarDesktop'
+import { Routes , Route} from 'react-router-dom';
+import Home from './pages/Home'
+import { useEffect } from 'react';
+import theme from './Styles/theme';
 
 function App() {
+  useEffect(() =>{
+    document.title = "T-STORE"
+  },[]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+    <Container maxWidth="xl"
+    sx={{
+      background:'#C576F6'
+    }}>
+      <Appbar/>
+      <Routes>
+  <Route path='/' element={<Home/>}/>
+      </Routes>
+    </Container>
+    </ThemeProvider>
   );
 }
 
