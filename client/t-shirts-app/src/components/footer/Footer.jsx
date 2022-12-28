@@ -89,55 +89,28 @@ const Footer = () => {
   return (
     <Box>
       <h1 style={{ color: "#6C0BA9", textAlign: "center", marginTop: "-50px" }}>
-        T - Store
+        T-Store
       </h1>
       <Container>
         <Row>
           <Column>
             <Heading>About Us</Heading>
-            <FooterLink href="#">Aim</FooterLink>
-            <FooterLink href="#">Vision</FooterLink>
-            <FooterLink href="#">Testimonials</FooterLink>
-          </Column>
-          <Column>
-            <Heading>Services</Heading>
-            <FooterLink href="#">Writing</FooterLink>
-            <FooterLink href="#">Internships</FooterLink>
-            <FooterLink href="#">Coding</FooterLink>
-            <FooterLink href="#">Teaching</FooterLink>
+            <FooterLink>T-Store for modern t-shirts</FooterLink>
           </Column>
           <Column>
             <Heading>Contact Us</Heading>
-            <FooterLink href="#">Uttar Pradesh</FooterLink>
-            <FooterLink href="#">Ahemdabad</FooterLink>
-            <FooterLink href="#">Indore</FooterLink>
-            <FooterLink href="#">Mumbai</FooterLink>
+            <FooterLink href="#"></FooterLink>
           </Column>
           <Column>
             <Heading>Social Media</Heading>
-            <FooterLink href="#">
-              <i className="fab fa-facebook-f">
-                <span style={{ marginLeft: "10px" }}>Facebook</span>
-              </i>
-            </FooterLink>
-            <FooterLink href="#">
+            <FooterLink href="http://www.instagram.com">
               <i className="fab fa-instagram">
                 <span style={{ marginLeft: "10px" }}>Instagram</span>
               </i>
             </FooterLink>
-            <FooterLink href="#">
-              <i className="fab fa-twitter">
-                <span style={{ marginLeft: "10px" }}>Twitter</span>
-              </i>
-            </FooterLink>
-            <FooterLink href="#">
-              <i className="fab fa-youtube">
-                <span style={{ marginLeft: "10px" }}>Youtube</span>
-              </i>
-            </FooterLink>
           </Column>
         </Row>
-        <div textAlign="center" pt={{ xs: 5, sm: 10 }} pb={{ xs: 5, sm: 5 }}>
+        <div textAlign="center" pt={{ xs: 5, sm: 10 }} pb={{ xs: 0, sm: 0 }}>
           T-Store &reg; {new Date().getFullYear()}
         </div>
       </Container>
