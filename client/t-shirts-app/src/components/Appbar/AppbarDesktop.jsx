@@ -1,4 +1,51 @@
-<svg width="257" height="94" viewBox="0 0 257 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import MenuItem from '@mui/material/MenuItem';
+import Menu from '@mui/material/Menu';
+import SearchIcon from '@mui/icons-material/Search'
+import ShoppingCardIcon from "@mui/icons-material/ShoppingCart";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import { CssBaseline, Divider } from '@mui/material';
+import Drawer from './Drawer'
+import { useUIContext } from "../..//context/ui";
+
+export default function AppBarDesktop({matches}) {
+      const [auth] = React.useState(true);
+      const [anchorEl, setAnchorEl] = React.useState(null);    
+      const { setDrawerOpen, setShowSearchBox } = useUIContext();
+    
+      const handleMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+        setAnchorEl(null);
+      };
+    
+      return (
+            <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="fixed">
+        <Toolbar >
+        {auth && (
+          <div>
+           <IconButton onClick={() => setDrawerOpen(true)}>
+        <MenuIcon />
+      </IconButton>
+          {/* <ResponsiveDrawer/> */}
+          <Menu>
+          <Drawer/>
+          </Menu>
+          </div>
+        )}
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <Box textAlign={"center"} variant="h4" sx={{marginTop:"4px"}}>
+          <svg width="220" height="60" viewBox="0 0 257 94" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_2_52)">
 <path d="M47 14.0189C51.0717 14.0189 54.5887 11.4228 55.8521 7.60363C53.4417 8.26714 50.3694 8.6676 47 8.6676C43.6309 8.6676 40.5586 8.26714 38.1486 7.60363C39.4113 11.4225 42.928 14.0189 47 14.0189Z" fill="#315966"/>
 <path d="M93.883 18.7153C93.6896 18.1727 93.2872 17.7264 92.763 17.4834L74.8416 9.21024C71.0294 7.91884 67.1457 6.89877 63.2242 6.1532C63.0861 6.12616 62.9487 6.11312 62.8132 6.11312C61.8424 6.11312 60.9731 6.78331 60.7568 7.76617C59.3248 14.0705 53.7442 18.7904 46.9997 18.7904C40.2555 18.7904 34.6745 14.0708 33.2429 7.76617C33.024 6.78331 32.1563 6.11312 31.1862 6.11312C31.0507 6.11312 30.9133 6.12616 30.7752 6.1532C26.854 6.89877 22.9702 7.91884 19.152 9.21024L1.237 17.4831C0.709627 17.7261 0.304397 18.1724 0.12023 18.715C-0.0702978 19.264 -0.0359455 19.8566 0.232511 20.3744L8.01267 35.7286C8.37687 36.4573 9.11767 36.8947 9.90141 36.8947C10.1037 36.8947 10.3089 36.8654 10.5112 36.8047L19.1524 34.2435V85.7624C19.1524 86.9323 20.1069 87.8866 21.28 87.8866H72.7203C73.8902 87.8866 74.8419 86.932 74.8419 85.7624V34.2442L83.4891 36.8053C83.6914 36.8661 83.8963 36.8953 84.0983 36.8953C84.8804 36.8953 85.6184 36.458 85.9876 35.7293L93.7707 20.3751C94.0328 19.8569 94.0703 19.2643 93.883 18.7153Z" fill="#315966"/>
@@ -16,3 +63,56 @@
 </clipPath>
 </defs>
 </svg>
+</Box>
+          </Typography>
+
+          <IconButton onClick={() => setShowSearchBox(true)}>
+            <SearchIcon/>
+        </IconButton>
+        <Divider/>
+          <IconButton>
+            <FavoriteIcon/>
+          </IconButton>
+          <Divider/>
+          <IconButton>
+            <ShoppingCardIcon/>
+          </IconButton>
+      
+          {auth && (
+            <div>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleMenu}
+                color="inherit"
+              >
+                <AccountCircle />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem onClick={handleClose}>Login</MenuItem>
+                <MenuItem onClick={handleClose}>Register</MenuItem>
+              </Menu>
+            </div>
+          )}
+        </Toolbar>
+      </AppBar>
+    </Box>
+  );
+ }
