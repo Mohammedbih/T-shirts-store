@@ -10,12 +10,12 @@ export default function Banner(){
   return(
     <div>
     <BannerContainer >
-<BannerImage src="https://images.pexels.com/photos/1884584/pexels-photo-1884584.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+<BannerImage src="/Images/Home/HomeImage.png" />
       <BannerContent>
         <BannerTitle variant="h2">
           T-STORE
         </BannerTitle>
-<Typography variant="h6">WELCOME TO OUR STORE</Typography>
+<Typography variant="h5" fontFamily= '"Montez", "cursive"'>WELCOME TO OUR STORE</Typography>
         <BannerDescription variant="subtitle">
           We have t-shirts and posters go and start your shopping
         </BannerDescription>

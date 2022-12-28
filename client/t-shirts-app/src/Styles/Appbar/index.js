@@ -3,7 +3,6 @@ import {styled} from "@mui/material/styles";
 import { Box } from "@mui/system";
 import "@fontsource/montez";
 import { Colors, DrawerWidth } from "../theme";
-// import { textPopUpTop } from "../../animation";
 
 // export const AppBar = styled(Box)(() => ({    
 //     display: 'flex',
@@ -19,15 +18,12 @@ import { Colors, DrawerWidth } from "../theme";
 //   fontSize: "4em",
 //   fontFamily: '"Montez", "cursive"',
 //   color: Colors.secondary,
-//   "&:hover": {
-//     animation: `${textPopUpTop} 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both`,
-//   },
 // }));
 
 export const ActionIconsContainerMobile = styled(Box)(() => ({
   flexGrow: "inherit",
   display: 'flex',
-  background: Colors.primary,
+  background: Colors.info,
   position: "fixed",
   bottom: 0,
   left: 0,

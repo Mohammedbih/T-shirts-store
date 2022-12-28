@@ -1,6 +1,7 @@
 import { styled } from "@mui/material/styles";
 import { Box, Button, Typography } from "@mui/material";
 import { Colors } from "../theme";
+import "@fontsource/montez";
 
 
 export const BannerContainer = styled(Box)(({ matches, theme }) => ({
@@ -13,10 +14,7 @@ export const BannerContainer = styled(Box)(({ matches, theme }) => ({
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       alignItems: "center",
-    },
-    // backgroundImage: `url(/images/banner/banner.png)`,
-    // backgroundRepeat: "no-repeat",
-    // backgroundPosition: "center",
+    }
   }));
   
   export const BannerContent = styled(Box)(() => ({
@@ -27,11 +25,7 @@ export const BannerContainer = styled(Box)(({ matches, theme }) => ({
     padding: "30px",
   }));
   
-  export const BannerImage = styled("img")(({ src, theme }) => ({
-    src: `url(${src})`,
-    // backgroundImage: `url(${src})`,
-    // backgroundRepeat: "no-repeat",
-    // backgroundPosition: "center",
+  export const BannerImage = styled("img")(({ theme }) => ({
     width: "1000px",
     [theme.breakpoints.down("md")]: {
       width: "350px",
@@ -48,18 +42,23 @@ export const BannerContainer = styled(Box)(({ matches, theme }) => ({
     marginBottom: "20px",
     [theme.breakpoints.down('sm')]: {
       fontSize: '42px',    
-    }
+    },
+    fontFamily: "cursive"
   }));
   
   export const BannerDescription = styled(Typography)(({ theme }) => ({
-    lineHeight: 1.25,
+    lineHeight: 1.5,
     letterSpacing: 1.25,
     marginBottom: "3em",
+    marginTop:"1em",
     [theme.breakpoints.down("md")]: {
       lineHeight: 1.15,
       letterSpacing: 1.15,
       marginBottom: "1.5em",
+      fontFamily: "Montez"
     },
+    fontSize: "30px",
+    fontFamily: '"Montez", "cursive"',
   }));
   
   export const BannerShopButton = styled(Button, {
@@ -82,4 +81,7 @@ export const BannerContainer = styled(Box)(({ matches, theme }) => ({
       padding: "10px 0px",
       fontSize: "14px",
     }, 
+    letterSpacing: 3,
+    fontSize:"20px",
+    fontFamily: "cursive"
 }));
