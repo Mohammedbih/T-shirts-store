@@ -3,7 +3,6 @@ import {styled} from "@mui/material/styles";
 import { Box } from "@mui/system";
 import "@fontsource/montez";
 import { Colors, DrawerWidth } from "../theme";
-
 // export const AppBar = styled(Box)(() => ({    
 //     display: 'flex',
 //     justifyContent: 'center',
