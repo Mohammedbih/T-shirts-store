@@ -1,18 +1,12 @@
 import { Divider, ListItemButton, ListItemIcon } from "@mui/material";
-import {
-  MyList,
-  ActionIconsContainerDesktop,
-  ActionIconsContainerMobile,
-} from "../../Styles/Appbar";
+import {MyList,ActionIconsContainerDesktop,ActionIconsContainerMobile,} from "../../Styles/Appbar";
 import ShoppingCardIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import PersonIcon from "@mui/icons-material/Person";
 import { Colors } from "../../Styles/theme";
 
 export default function Actions(matches) {
-  const Component = matches
-    ? ActionIconsContainerMobile
-    : ActionIconsContainerDesktop;
+  const Component = matches ? ActionIconsContainerMobile : ActionIconsContainerDesktop;
   return (
     <Component>
       <MyList type="row">
@@ -26,7 +20,7 @@ export default function Actions(matches) {
             sx={{
               display: "flex",
               justifyContent: "center",
-              color: matches && Colors.secondary,
+              color: matches && Colors.black,
             }}
           >
             <ShoppingCardIcon />
@@ -43,7 +37,7 @@ export default function Actions(matches) {
             sx={{
               display: "flex",
               justifyContent: "center",
-              color: matches && Colors.secondary,
+              color: matches && Colors.black,
             }}
           >
             <FavoriteIcon />
@@ -60,7 +54,7 @@ export default function Actions(matches) {
             sx={{
               display: "flex",
               justifyContent: "center",
-              color: matches && Colors.secondary,
+              color: matches && Colors.black,
             }}
           >
             <PersonIcon />
