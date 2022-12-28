@@ -12,16 +12,10 @@ export default function Actions(matches) {
       <MyList type="row">
         <Divider orientation="vertical" flexItem />
         <ListItemButton
-          sx={{
-            justifyContent: "center",
-          }}
+          sx={{ justifyContent: "center" }}
         >
           <ListItemIcon
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              color: matches && Colors.black,
-            }}
+            sx={{ display: "flex", justifyContent: "center", color: matches && Colors.black }}
           >
             <ShoppingCardIcon />
           </ListItemIcon>
@@ -29,16 +23,10 @@ export default function Actions(matches) {
         <Divider orientation="vertical" flexItem />
 
         <ListItemButton
-          sx={{
-            justifyContent: "center",
-          }}
+          sx={{ justifyContent: "center" }}
         >
           <ListItemIcon
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              color: matches && Colors.black,
-            }}
+            sx={{ display: "flex", justifyContent: "center", color: matches && Colors.black }}
           >
             <FavoriteIcon />
           </ListItemIcon>
@@ -46,16 +34,11 @@ export default function Actions(matches) {
         <Divider orientation="vertical" flexItem />
 
         <ListItemButton
-          sx={{
-            justifyContent: "center",
-          }}
+          sx={{ justifyContent: "center" }}
         >
           <ListItemIcon
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              color: matches && Colors.black,
-            }}
+            sx={{ display: "flex",
+              justifyContent: "center", color: matches && Colors.black }}
           >
             <PersonIcon />
           </ListItemIcon>
