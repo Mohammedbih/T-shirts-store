@@ -4,6 +4,9 @@ import CloseIcon from "@mui/icons-material/Close";
 import { DrawerCloseButton } from "../../Styles/Appbar";
 import { lighten } from "polished";
 import { Colors } from "../../Styles/theme";
+import React from 'react';
+import { Routes, Route, Link, Outlet } from 'react-router-dom';
+import Products from "../../pages/products/Products";
 
 export default function AppDrawer() {
   const { drawerOpen, setDrawerOpen } = useUIContext();
@@ -28,10 +31,6 @@ export default function AppDrawer() {
         </ListItemButton>
         <Divider variant="middle"/>
         <ListItemButton>
-          <ListItemText>Categories</ListItemText>
-        </ListItemButton>
-        <Divider variant="middle"/>
-        <ListItemButton>
           <ListItemText>Products</ListItemText>
         </ListItemButton>
         <Divider variant="middle"/>
@@ -53,6 +52,10 @@ export default function AppDrawer() {
         <Divider variant="middle"/>
       </List>
     </Drawer>
+    <Routes>
+        {/* <Route path="/" element={< />} /> */}
+        <Route path="/products" element={<Products />} />
+      </Routes>
     </>
   );
 }

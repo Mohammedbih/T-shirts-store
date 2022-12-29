@@ -1,5 +1,5 @@
 import { useTheme } from "@mui/material/styles";
-import { useMediaQuery ,Typography , Box} from "@mui/material";
+import { useMediaQuery ,Typography } from "@mui/material";
 import { BannerContainer,BannerContent,BannerDescription,BannerImage,BannerShopButton,BannerTitle } from "../../Styles/banner";
 
 export default function Banner(){
