@@ -8,9 +8,9 @@ import Products from "./pages/products/Products";
 import AppDrawer from "./components/Appbar/Drawer";
 import { UIProvider } from "./context/ui";
 import SearchBox from "./components/Appbar/Search";
- // import Footer from "./components/footer/Footer";
+//import Footer from "./components/footer/Footer";
 import Categories from "./pages/categories/Categories";
-
+import Cart from "./pages/Cart";
 function App() {
   useEffect(() => {
     document.title = "T-STORE";
@@ -30,12 +30,14 @@ function App() {
               {/*
         <Products/> */}
               <SearchBox />
-              <Categories/>
+              
+              <Categories />
+              <Cart/>
+              {/* <Footer /> */}
             </UIProvider>
           </Stack>
         </Container>
       </ThemeProvider>
-      {/* //<Footer /> */}
     </div>
   );
 }
