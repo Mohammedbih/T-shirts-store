@@ -8,7 +8,8 @@ import Products from "./pages/products/Products";
 import AppDrawer from "./components/Appbar/Drawer";
 import { UIProvider } from "./context/ui";
 import SearchBox from "./components/Appbar/Search";
-// import Footer from "./components/footer/Footer";
+ // import Footer from "./components/footer/Footer";
+import Categories from "./pages/categories/Categories";
 
 function App() {
   useEffect(() => {
@@ -29,11 +30,12 @@ function App() {
               {/*
         <Products/> */}
               <SearchBox />
+              <Categories/>
             </UIProvider>
           </Stack>
         </Container>
       </ThemeProvider>
-      {/* <Footer /> */}
+      {/* //<Footer /> */}
     </div>
   );
 }
