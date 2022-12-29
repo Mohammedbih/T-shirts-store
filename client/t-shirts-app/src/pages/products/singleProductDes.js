@@ -9,6 +9,7 @@ import useDialog from "../../hooks/UseDialog";
 import ProductDetails from "./productDetails/details";
 
 
+
 export default function SingleProductDes({product , matches}){
 
     const [showOptions, setShowOptions] = useState(false);
@@ -51,6 +52,8 @@ export default function SingleProductDes({product , matches}){
         </Product>
     <ProductMeta product = {product} matches = {matches}/>
     <ProductDetailDialog product={product}/> 
+
+    
         </>
         
     );

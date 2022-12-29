@@ -3,8 +3,22 @@ import { Container, Grid, useMediaQuery } from "@mui/material";
 import { products } from "./data";
 import SingleProductMob from "./singleProductMob";
 import SingleProductDes from "./singleProductDes";
+// import { useEffect } from "react";
+// import axios from "axios";
+// import { useState } from "react";
 
 export default function  Products(){
+
+    // const [list, setList] = useState([]);
+
+    // useEffect(()=>{
+    //     axios.get("https://t-store.deta.dev/api/v1/t-shirt/all")
+    //     .then(data=>{
+    //         setList(...list, data);
+
+    //         console.log(list);
+    //     })
+    // },[])
 
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.down("md"));

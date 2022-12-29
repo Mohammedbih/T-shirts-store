@@ -3,14 +3,15 @@ import { ThemeProvider } from "@mui/system";
 import Appbar from "./components/Appbar";
 import { useEffect } from "react";
 import theme from "./Styles/theme";
-import Banner from "./pages/HomePage/Banner";
-//import Products from "./pages/products/Products";
+// import Banner from "./pages/HomePage/Banner";
+import Products from "./pages/products/Products";
+// import StyledRating from "./pages/products/Products";
 import AppDrawer from "./components/Appbar/Drawer";
 import { UIProvider } from "./context/ui";
 import SearchBox from "./components/Appbar/Search";
 import Footer from "./components/Footer";
 import Categories from "./pages/categories/Categories";
-//import Cart from "./pages/Cart";
+import Cart from "./pages/Cart";
 function App() {
   useEffect(() => {
     document.title = "T-STORE";
@@ -25,11 +26,12 @@ function App() {
             <UIProvider>
               <Appbar />
               <AppDrawer />
-              <Box sx={{ marginTop: "70px" }}>
+              {/* <Box sx={{ marginTop: "70px" }}>
                 <Banner />
-              </Box>
-              {/*
-        <Products/> */}
+              </Box> */}
+              
+        <Products/>
+       
               <SearchBox />
               
               <Categories />

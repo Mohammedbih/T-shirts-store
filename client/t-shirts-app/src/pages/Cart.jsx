@@ -45,6 +45,7 @@ import IncDec from "./products/productDetails/ui";
 
 const Container = styled.div`
   padding: 20px;
+  margin-top: 60px;
 `;
 const Wrapper = styled.div``;
 const Title = styled.h1`
