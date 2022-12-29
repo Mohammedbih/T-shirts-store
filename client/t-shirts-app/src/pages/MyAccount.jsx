@@ -16,7 +16,7 @@ const MyAccount = () => {
 
       <Box
         sx={{
-          marginTop: "250px",
+          marginTop: "250px",   
           boxShadow: "1px 2px 3px #000",
           width: "55%",
           marginLeft: "400px",
