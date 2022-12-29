@@ -1,7 +1,7 @@
 const AxiosConfig = {
-    baseURL: 'http://localhost:5000/',
+    baseURL: 'https://t-store.deta.dev/',
     timeout: 10000,
-    headers: {'X-User-Token': ''}
+    headers: {'authorization': `Bearer ${localStorage.getItem('token') ?? ''}`}
   };
   
   export default AxiosConfig;

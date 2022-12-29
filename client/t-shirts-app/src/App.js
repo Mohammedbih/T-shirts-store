@@ -1,11 +1,4 @@
-import {
-  Button,
-  Container,
-  CssBaseline,
-  Stack,
-  Box,
-  Switch,
-} from "@mui/material";
+import { Button, Container, CssBaseline, Stack, Box } from "@mui/material";
 import { ThemeProvider } from "@mui/system";
 // import Appbar from "./components/Appbar";
 import { useEffect } from "react";
@@ -27,15 +20,12 @@ function App() {
   }, []);
   return (
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <Router>
-          <Switch>
-            <Route exact path={Path.SIGN_IN} element={<SignIn />} />
-            <Route exact path={Path.SIGN_UP} element={<SignUp />} />
-            {/* <Route path={Path.HOME} element={<Ho />} /> */}
-          </Switch>
-        </Router>
-      </BrowserRouter>
+      {/* <SignUp /> */}
+        <Routes>
+          <Route exact path={Path.HOME} element={<SignIn />} />
+          <Route exact path={Path.SIGN_IN} element={<SignIn />} />
+          <Route exact path={Path.SIGN_UP} element={<SignUp />} />
+        </Routes>
     </ThemeProvider>
   );
 }

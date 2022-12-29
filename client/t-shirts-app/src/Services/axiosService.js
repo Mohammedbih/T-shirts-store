@@ -8,8 +8,8 @@ export default class Axios {
 
   // *** Auth API ***
   createUserWithEmailAndPassword = (name, email, password) =>
-    this.auth.post("/register", { name, email, password });
+    this.auth.post("/api/v1/register", { name, email, password });
 
   signInWithEmailAndPassword = (email, password) =>
-    this.auth.post("/login", { email, password });
+    this.auth.post("/api/v1/login", { email, password });
 }
