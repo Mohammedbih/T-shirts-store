@@ -1,4 +1,5 @@
 import "./App.css";
+import MyAccount from "./pages/MyAccount";
 import Header from "./components/Header";
 import Footer from "./components/footer/Footer";
 
@@ -8,7 +9,7 @@ function App() {
     
     <div className="App">
 
-<Footer/>
+<MyAccount/>
 
     </div>
   );
