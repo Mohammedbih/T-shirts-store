@@ -1,4 +1,11 @@
-import { Button, Container, CssBaseline, Stack, Box } from "@mui/material";
+import {
+  Button,
+  Container,
+  CssBaseline,
+  Stack,
+  Box,
+  Switch,
+} from "@mui/material";
 import { ThemeProvider } from "@mui/system";
 // import Appbar from "./components/Appbar";
 import { useEffect } from "react";
@@ -11,7 +18,7 @@ import theme from "./Styles/theme";
 // import Checkout from "./components/checkout/Checkout";
 import { Path } from "./routs/Path";
 import SignUp from "./components/signup/SignUp";
-import { Route, Router, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import SignIn from "./components/signin/SignIn";
 
 function App() {
@@ -20,13 +27,15 @@ function App() {
   }, []);
   return (
     <ThemeProvider theme={theme}>
-      <Router>
-        <Routes>
-          <Route exact path={Path.SIGN_IN} element={<SignIn />} />
-          <Route exact path={Path.SIGN_UP} element={<SignUp />} />
-          {/* <Route path={Path.HOME} element={<Ho />} /> */}
-        </Routes>
-      </Router>
+      <BrowserRouter>
+        <Router>
+          <Switch>
+            <Route exact path={Path.SIGN_IN} element={<SignIn />} />
+            <Route exact path={Path.SIGN_UP} element={<SignUp />} />
+            {/* <Route path={Path.HOME} element={<Ho />} /> */}
+          </Switch>
+        </Router>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
