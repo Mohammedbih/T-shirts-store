@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Path } from "../../routs/Path";
 const Container = styled.div`
   flex: 1;
   margin: 3px;
@@ -49,7 +51,7 @@ const CategoryItem = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Title>{item.title}</Title>
-        <Button>VIEW MORE</Button>
+        <Link to={Path.PRODUCTS}><Button>VIEW MORE</Button></Link>
       </Info>
     </Container>
   );
