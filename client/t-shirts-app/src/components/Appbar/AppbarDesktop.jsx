@@ -11,7 +11,7 @@ import Menu from '@mui/material/Menu';
 import SearchIcon from '@mui/icons-material/Search'
 import ShoppingCardIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import { CssBaseline, Divider } from '@mui/material';
+import { Divider } from '@mui/material';
 import Drawer from './Drawer'
 import { useUIContext } from "../..//context/ui";
 

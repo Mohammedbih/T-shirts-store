@@ -1,4 +1,4 @@
-import { Button, Container, CssBaseline, Stack ,Box} from "@mui/material";
+import { Container, CssBaseline, Stack ,Box} from "@mui/material";
 import { ThemeProvider } from "@mui/system";
 import Appbar from "./components/Appbar"
 import { useEffect } from "react";
@@ -13,6 +13,7 @@ function App() {
   useEffect(() => {
     document.title = "T-STORE";
   }, []);
+  
   return (
     <div>
       <ThemeProvider theme={theme}>
@@ -23,15 +24,13 @@ function App() {
         <UIProvider>
         <Appbar/>
         <AppDrawer/>
+        <SearchBox/>
         <Box sx={{marginTop:"70px"}}>
         <Banner/>
         </Box>
-        {/*
-        <Products/> */}
-        <SearchBox/>
+        <Products/>
         </UIProvider>
         </Stack>
-         
       </Container>
       </ThemeProvider>
     </div>

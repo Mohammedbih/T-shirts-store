@@ -76,7 +76,6 @@ export const BannerContainer = styled(Box)(({ matches, theme }) => ({
     padding: "20px 0px",
     color: Colors.secondary,
     fontWeight: "bold",
-    fontSize: "16px",
     [theme.breakpoints.down("sm")]: {
       padding: "10px 0px",
       fontSize: "14px",

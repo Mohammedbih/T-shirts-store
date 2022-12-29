@@ -1,4 +1,4 @@
-import { Button, IconButton, Slide, TextField } from "@mui/material";
+import { IconButton, Slide } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
 import { useUIContext } from "../../context/ui";

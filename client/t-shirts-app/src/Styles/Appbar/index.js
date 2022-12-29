@@ -1,4 +1,4 @@
-import { IconButton, List, Typography } from "@mui/material";
+import { IconButton, List } from "@mui/material";
 import {styled} from "@mui/material/styles";
 import { Box } from "@mui/system";
 import "@fontsource/montez";
