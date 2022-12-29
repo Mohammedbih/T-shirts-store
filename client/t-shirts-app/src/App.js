@@ -1,41 +1,33 @@
-import { Button, Container, CssBaseline, Stack ,Box} from "@mui/material";
+import { Button, Container, CssBaseline, Stack, Box } from "@mui/material";
 import { ThemeProvider } from "@mui/system";
-import Appbar from "./components/Appbar"
+// import Appbar from "./components/Appbar";
 import { useEffect } from "react";
 import theme from "./Styles/theme";
-import Banner from "./pages/HomePage/Banner";
-import Products from "./pages/products/Products";
-import AppDrawer from "./components/Appbar/Drawer";
-import { UIProvider } from "./context/ui";
-import SearchBox from "./components/Appbar/Search";
+// import Banner from "./pages/HomePage/Banner";
+// import Products from "./pages/products/Products";
+// import AppDrawer from "./components/Appbar/Drawer";
+// import { UIProvider } from "./context/ui";
+// import SearchBox from "./components/Appbar/Search";
+// import Checkout from "./components/checkout/Checkout";
+import { Path } from "./routs/Path";
+import SignUp from "./components/signup/SignUp";
+import { Route, Router, Routes } from "react-router-dom";
+import SignIn from "./components/signin/SignIn";
 
 function App() {
   useEffect(() => {
     document.title = "T-STORE";
   }, []);
   return (
-    <div>
-      <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Container maxWidth="xl" 
-      sx={{background: "#fff"}}>
-        <Stack>
-        <UIProvider>
-        <Appbar/>
-        <AppDrawer/>
-        <Box sx={{marginTop:"70px"}}>
-        <Banner/>
-        </Box>
-        {/*
-        <Products/> */}
-        <SearchBox/>
-        </UIProvider>
-        </Stack>
-         
-      </Container>
-      </ThemeProvider>
-    </div>
-    
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Routes>
+          <Route exact path={Path.SIGN_IN} element={<SignIn />} />
+          <Route exact path={Path.SIGN_UP} element={<SignUp />} />
+          {/* <Route path={Path.HOME} element={<Ho />} /> */}
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 
